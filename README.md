@@ -4,17 +4,19 @@ A simplistic Transmission RPC client for Ruby. It implements part of [RPC 1.7.x]
 
 You can:
 
-	- Add a torrent by URL or file path
-	- Start a torrent
-	- Stop a torrent
-	- Get all torrents
-	- Delete torrents from Transmission and from disk
+* Add a torrent by URL or file path
+* Start a torrent
+* Stop a torrent
+* Get all torrents
+* Delete torrents from Transmission and from disk
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-	gem 'transmission-rpc'
+```ruby
+gem 'transmission-rpc'
+```
 
 And then execute:
 
@@ -36,34 +38,49 @@ It depends on ```transmission-daemon```. Install it from homebrew:
 
 To add a torrent by URL or file path:
 
-	Transmission::RPC::Torrent + "http://example.com/url/to/torrent.torrent"
+```ruby
+Transmission::RPC::Torrent + "http://example.com/url/to/torrent.torrent"
+```
 
 To start all torrents:
 
-	Transmission::RPC::Torrent.start!
+```ruby
+Transmission::RPC::Torrent.start!
+```
 
 To stop all torrents:
 
-	Transmission::RPC::Torrent.stop!
+```ruby
+Transmission::RPC::Torrent.stop!
+```
 
 To get all torrents:
 
-	Transmission.torrents
+```ruby
+Transmission.torrents
+```
 
 To start a specific torrent:
 
-	Transmission.torrents.first.start!
+```ruby
+Transmission.torrents.first.start!
+```
 
 To stop a specific torrent:
 
-	Transmission.torrents.first.stop!
+```ruby
+Transmission.torrents.first.stop!
+```
 
 To delete a torrent:
 
-	Transmission.torrents.first.delete!
+```ruby
+Transmission.torrents.first.delete!
+```
 
 To delete a torrent and delete the contents from disk:
 
-	Transmission.torrents.first.delete!(true)
-
+```ruby
+Transmission.torrents.first.delete!(true)
+```
 
