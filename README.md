@@ -3,6 +3,7 @@
 A simplistic Transmission RPC client for Ruby. It implements part of [RPC 1.7.x](https://trac.transmissionbt.com/browser/branches/1.7x/doc/rpc-spec.txt).
 
 You can:
+
 	- Add a torrent by URL or file path
 	- Start a torrent
 	- Stop a torrent
