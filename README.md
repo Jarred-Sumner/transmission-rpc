@@ -13,23 +13,23 @@ You can:
 
 Add this line to your application's Gemfile:
 
-    gem 'transmission-rpc'
+	gem 'transmission-rpc'
 
 And then execute:
 
-    $ bundle
+	$ bundle
 
 Or install it yourself as:
 
-    $ gem install transmission-rpc
+	$ gem install transmission-rpc
 
 It depends on ```transmission-daemon```. Install it from homebrew:
 		
-		$ brew install transmission
+	$ brew install transmission
 
 ```transmission-daemon``` must be running, run it like so:
 
-		$ transmission-daemon
+	$ transmission-daemon
 
 ## Usage
 

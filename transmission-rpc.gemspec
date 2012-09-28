@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["jarred@jarredsumner.com"]
   gem.description   = %q{A simple Transmission RPC client for Ruby.}
   gem.summary       = %q{A simple Transmission RPC client for Ruby.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/jarred-sumner/transmission-rpc"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
