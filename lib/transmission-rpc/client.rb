@@ -20,8 +20,12 @@ module Transmission
 			# If you're curious about the formatting, [read this](https://trac.transmissionbt.com/browser/branches/1.7x/doc/rpc-spec.txt) 
 			def self.request(method, arguments = {}, ids = [])
 				arguments = self.add_ids(arguments, ids) if ids.present?
-				@response = RestClient.post(self.url, { :method => method, :arguments => arguments }.to_json, :x_transmission_session_id => self.session_id)
-				JSON.parse(@response.body)
+				begin
+					@response = RestClient.post(self.url, { :method => method, :arguments => arguments }.to_json, :x_transmission_session_id => self.session_id)
+					JSON.parse(@response.body)
+				rescue
+					puts "Couldn't connect to Transmission. Is Transmission running at http://#{Transmission.configuration.ip}:#{Transmission.configuration.port}?"
+				end
 			end
 
 			private

@@ -1,8 +1,7 @@
-require "./transmission-rpc/version"
 require 'rest-client'
 require 'active_support/core_ext'
-require './transmission-rpc/torrent.rb'
-require './transmission-rpc/client.rb'
+require 'transmission-rpc/torrent'
+require 'transmission-rpc/client'
 
 module Transmission
 	mattr_writer :configuration

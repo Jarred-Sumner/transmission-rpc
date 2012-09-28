@@ -1,5 +1,5 @@
 module Transmission
-  module Rpc
+  module RPC
     VERSION = "0.0.1"
   end
 end
