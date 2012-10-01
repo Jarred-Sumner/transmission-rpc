@@ -264,10 +264,10 @@
 			}
 		},
 		{
-			"file": "transmission-rpc.gemspec",
+			"file": "lib/transmission-rpc/client.rb",
 			"settings":
 			{
-				"buffer_size": 931,
+				"buffer_size": 2307,
 				"line_ending": "Unix"
 			}
 		}
@@ -384,6 +384,7 @@
 	},
 	"file_history":
 	[
+		"/Users/jarred/Code/transmission-rpc/transmission-rpc.gemspec",
 		"/Users/jarred/Code/Content/transmission-rpc/lib/transmission-rpc/torrent.rb",
 		"/Users/jarred/Code/Content/transmission-rpc/lib/transmission-rpc/client.rb",
 		"/Users/jarred/Code/Content/transmission-rpc/transmission-rpc.gemspec",
@@ -510,8 +511,7 @@
 		"/Users/jarred/Code/Lockitron/Rails/app/views/account/register.html.erb",
 		"/Users/jarred/Code/Lockitron/Rails/app/views/account/register/_account.html.erb",
 		"/Users/jarred/Code/Lockitron/Rails/app/views/dashboard/settings/_account.html.erb",
-		"/Users/jarred/Code/Lockitron/Rails/app/controllers/activate_controller.rb",
-		"/Users/jarred/Code/Lockitron/Rails/app/views/layouts/dashboard.html.erb"
+		"/Users/jarred/Code/Lockitron/Rails/app/controllers/activate_controller.rb"
 	],
 	"find":
 	{
@@ -748,28 +748,27 @@
 				},
 				{
 					"buffer": 1,
-					"file": "transmission-rpc.gemspec",
+					"file": "lib/transmission-rpc/client.rb",
 					"settings":
 					{
-						"buffer_size": 931,
+						"buffer_size": 2307,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								227,
-								227
+								561,
+								561
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 68.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -823,16 +822,16 @@
 		"selected_items":
 		[
 			[
+				"client",
+				"transmission-rpc/lib/transmission-rpc/client.rb"
+			],
+			[
 				"emspec",
 				"transmission-rpc/transmission-rpc.gemspec"
 			],
 			[
 				"torrent",
 				"transmission-rpc/lib/transmission-rpc/torrent.rb"
-			],
-			[
-				"client",
-				"lib/transmission-rpc/client.rb"
 			],
 			[
 				"",

@@ -26,8 +26,8 @@ module Transmission
 							self.request(method, arguments, ids)
 						end
 					end
-				rescue
-					puts "Couldn't connect to Transmission. Is Transmission running at http://#{Transmission.configuration.ip}:#{Transmission.configuration.port}?"
+				rescue => exception
+					p exception
 					return false
 				end
 			end
