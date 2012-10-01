@@ -19,7 +19,7 @@ module Transmission
 					@response = RestClient.post(self.url, { :method => method, :arguments => arguments }.to_json, :x_transmission_session_id => self.session_id) do |response, request, result, &block|
 						case response.code
 						when 200
-							return JSON.parse(@response.body)
+							return JSON.parse(response.body)
 						# Wrong session ID, set session ID to nil and try again
 						when 409
 							@session_id = nil
