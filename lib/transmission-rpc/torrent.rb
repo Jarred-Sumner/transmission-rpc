@@ -2,21 +2,22 @@ module Transmission
 	module RPC
 		# A nice wrapper around Transmission's RPC
 		class Torrent
-			attr_accessor :id, :seeders, :leechers, :name, :download_directory, :eta, :percent_done, :files, :total_size, :date_added, :bytes_left, :comment, :description, :torrent_file, :hash, :status
+			attr_accessor :id, :seeders, :leechers, :name, :download_directory, :eta, :percent_done, :files, :total_size, :date_added, :bytes_left, :comment, :description, :torrent_file, :hash, :status, :download_speed
 			include Transmission::RPC
 			
 			def initialize(options = {})
-				self.id 					= options['id']
-				self.date_added 	= options['addedDate']
-				self.comment 			= options['comment']
-				self.eta 					= options['eta']
-				self.bytes_left 	= options['leftUntilDone'] 
-				self.name         = options['name']
-				self.percent_done = options['percentDone']
-				self.torrent_file = options['torrentFile']
-				self.total_size   = options['totalSize']
-				self.hash  				= options['hashString']
-				self.status 			= options['status']
+				self.id 				 	  = options['id']
+				self.date_added 	  = options['addedDate']
+				self.comment 			  = options['comment']
+				self.eta 					  = options['eta']
+				self.bytes_left 	  = options['leftUntilDone'] 
+				self.name           = options['name']
+				self.percent_done   = options['percentDone']
+				self.torrent_file   = options['torrentFile']
+				self.total_size     = options['totalSize']
+				self.hash  				  = options['hashString']
+				self.status 			  = options['status']
+				self.download_speed = options['rateDownload']
 			end
 
 			# Starts downloading the current torrent
@@ -90,7 +91,7 @@ module Transmission
 
 			# The accessors for a torrent, the way that Transmission's RPC likes them.
 			def self.fields
-				@fields ||= %w(addedDate comment eta id leechers name seeders percentDone totalSize torrentFile status leftUntilDone hashString)
+				@fields ||= %w(addedDate comment eta id leechers name seeders percentDone totalSize torrentFile status leftUntilDone hashString rateDownload)
 			end
 
 		end

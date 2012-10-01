@@ -255,29 +255,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "Gemfile",
-			"settings":
-			{
-				"buffer_size": 101,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/transmission-rpc.rb",
-			"settings":
-			{
-				"buffer_size": 278,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -393,9 +370,14 @@
 	[
 		"/Users/jarred/Code/Content/transmission-rpc/lib/transmission-rpc/torrent.rb",
 		"/Users/jarred/Code/Content/transmission-rpc/lib/transmission-rpc/client.rb",
-		"/Users/jarred/.config/transmission-daemon/torrents/Prometheus.2012.DVDRip.XViD.AC3-REFiLL.228f94bb71013ced.torrent",
-		"/Users/jarred/Code/Content/transmission-rpc/lib/transmission-rpc.rb",
 		"/Users/jarred/Code/Content/transmission-rpc/transmission-rpc.gemspec",
+		"/Users/jarred/Code/Content/transmission-rpc/lib/transmission-rpc.rb",
+		"/Users/jarred/Code/Content/transmission-rpc/lib/transmission-rpc/version.rb",
+		"/Users/jarred/Code/Content/transmission-rpc/README.md",
+		"/Users/jarred/Code/Content/transmission-rpc/LICENSE.txt",
+		"/Users/jarred/Code/Content/transmission-rpc/transmission-rpc.sublime-project",
+		"/Users/jarred/Code/Content/transmission-rpc/Gemfile",
+		"/Users/jarred/.config/transmission-daemon/torrents/Prometheus.2012.DVDRip.XViD.AC3-REFiLL.228f94bb71013ced.torrent",
 		"/Users/jarred/Code/Content/transmission-rpc/Rakefile",
 		"/Users/jarred/Downloads/Lockitron.2/congrats.html",
 		"/Users/jarred/Code/Lockitron/Rails/app/assets/stylesheets/preorder/main.css.scss",
@@ -513,12 +495,7 @@
 		"/Users/jarred/Code/Lockitron/Rails/app/views/account/register/_account.html.erb",
 		"/Users/jarred/Code/Lockitron/Rails/app/views/dashboard/settings/_account.html.erb",
 		"/Users/jarred/Code/Lockitron/Rails/app/controllers/activate_controller.rb",
-		"/Users/jarred/Code/Lockitron/Rails/app/views/layouts/dashboard.html.erb",
-		"/Users/jarred/Code/Lockitron/Rails/public/js/settings.js",
-		"/Users/jarred/Code/Lockitron/Rails/app/views/store/_account.html.erb",
-		"/Users/jarred/Code/Lockitron/Rails/app/models/facebook.rb",
-		"/Users/jarred/Code/Lockitron/Rails/app/views/dashboard/settings/_billing.html.erb",
-		"/Users/jarred/Code/Lockitron/Rails/app/controllers/sms/auth_controller.rb"
+		"/Users/jarred/Code/Lockitron/Rails/app/views/layouts/dashboard.html.erb"
 	],
 	"find":
 	{
@@ -723,86 +700,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Gemfile",
-					"settings":
-					{
-						"buffer_size": 101,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "lib/transmission-rpc.rb",
-					"settings":
-					{
-						"buffer_size": 278,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								192,
-								192
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -856,7 +755,7 @@
 				"lib/transmission-rpc/client.rb"
 			],
 			[
-				"torrent",
+				"",
 				"lib/transmission-rpc/torrent.rb"
 			],
 			[
@@ -864,15 +763,59 @@
 				"lib/transmission-rpc.rb"
 			],
 			[
+				"gemspec",
+				"transmission-rpc.gemspec"
+			],
+			[
+				"transmission",
+				"lib/transmission-rpc.rb"
+			],
+			[
+				"vers",
+				"lib/transmission-rpc/version.rb"
+			],
+			[
+				"version",
+				"lib/transmission-rpc/version.rb"
+			],
+			[
+				"lice",
+				"LICENSE.txt"
+			],
+			[
+				"torrent",
+				"lib/transmission-rpc/torrent.rb"
+			],
+			[
+				"torr",
+				"lib/transmission-rpc/torrent.rb"
+			],
+			[
+				"transmissio",
+				"lib/transmission-rpc/torrent.rb"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"gem",
+				"transmission-rpc.gemspec"
+			],
+			[
+				"transmi",
+				"lib/transmission-rpc.rb"
+			],
+			[
+				"tran",
+				"transmission-rpc.sublime-project"
+			],
+			[
 				"torrent.rb",
 				"lib/transmission-rpc/torrent.rb"
 			],
 			[
 				"tra",
-				"transmission-rpc.gemspec"
-			],
-			[
-				"gemspec",
 				"transmission-rpc.gemspec"
 			],
 			[
@@ -1014,10 +957,6 @@
 			[
 				"datab",
 				"config/database.yml"
-			],
-			[
-				"",
-				".gitignore.rails2"
 			],
 			[
 				"lock_controller",
@@ -1322,46 +1261,6 @@
 			[
 				"seeds",
 				"db/seeds.rb"
-			],
-			[
-				"key_m",
-				"lib/key_management.rb"
-			],
-			[
-				"acces",
-				"app/controllers/access_controller.rb"
-			],
-			[
-				"permissio",
-				"app/models/permission.rb"
-			],
-			[
-				"key_",
-				"lib/key_management.rb"
-			],
-			[
-				"key_am",
-				"lib/key_management.rb"
-			],
-			[
-				"dashboard",
-				"app/assets/javascripts/dashboard.js"
-			],
-			[
-				"_log.html",
-				"app/views/dashboard/analytics/_log.html.erb"
-			],
-			[
-				"device.rb",
-				"app/models/device.rb"
-			],
-			[
-				"home_controller",
-				"app/controllers/home_controller.rb"
-			],
-			[
-				"splash.html",
-				"app/views/home/splash.html.erb"
 			]
 		],
 		"width": 0.0
