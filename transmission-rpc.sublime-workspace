@@ -255,6 +255,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "lib/transmission-rpc/torrent.rb",
+			"settings":
+			{
+				"buffer_size": 2923,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "transmission-rpc.gemspec",
+			"settings":
+			{
+				"buffer_size": 931,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -700,8 +716,64 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "lib/transmission-rpc/torrent.rb",
+					"settings":
+					{
+						"buffer_size": 2923,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2899,
+								2899
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "transmission-rpc.gemspec",
+					"settings":
+					{
+						"buffer_size": 931,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								227,
+								227
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -751,6 +823,14 @@
 		"selected_items":
 		[
 			[
+				"emspec",
+				"transmission-rpc/transmission-rpc.gemspec"
+			],
+			[
+				"torrent",
+				"transmission-rpc/lib/transmission-rpc/torrent.rb"
+			],
+			[
 				"client",
 				"lib/transmission-rpc/client.rb"
 			],
@@ -781,10 +861,6 @@
 			[
 				"lice",
 				"LICENSE.txt"
-			],
-			[
-				"torrent",
-				"lib/transmission-rpc/torrent.rb"
 			],
 			[
 				"torr",
@@ -1257,10 +1333,6 @@
 			[
 				"device",
 				"app/models/device.rb"
-			],
-			[
-				"seeds",
-				"db/seeds.rb"
 			]
 		],
 		"width": 0.0

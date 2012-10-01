@@ -8,12 +8,7 @@ module Transmission
 			# Checks if we're connected to the Trasmission Daemon.
 			# If you're having problems, make sure you have the Transmission Daemon installed and then try running transmission-daemon -f in your shell
 			def self.connected?
-				begin
-					request("session-get")
-					true
-				rescue
-					false
-				end
+				request("session-get")
 			end
 
 			# Sends out a request to Transmission's RPC server
@@ -21,10 +16,19 @@ module Transmission
 			def self.request(method, arguments = {}, ids = [])
 				arguments = self.add_ids(arguments, ids) if ids.present?
 				begin
-					@response = RestClient.post(self.url, { :method => method, :arguments => arguments }.to_json, :x_transmission_session_id => self.session_id)
-					JSON.parse(@response.body)
+					@response = RestClient.post(self.url, { :method => method, :arguments => arguments }.to_json, :x_transmission_session_id => self.session_id) do |response, request, result, &block|
+						case response.code
+						when 200
+							return JSON.parse(@response.body)
+						# Wrong session ID, set session ID to nil and try again
+						when 409
+							@session_id = nil
+							self.request(method, arguments, ids)
+						end
+					end
 				rescue
 					puts "Couldn't connect to Transmission. Is Transmission running at http://#{Transmission.configuration.ip}:#{Transmission.configuration.port}?"
+					return false
 				end
 			end
 
