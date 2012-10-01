@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "transmission-rpc"
-  gem.version       = '0.1.0'
+  gem.version       = '0.1.1'
   gem.authors       = ["Jarred Sumner"]
   gem.email         = ["jarred@jarredsumner.com"]
   gem.description   = %q{A simple Transmission RPC client for Ruby.}
