@@ -42,6 +42,12 @@ To add a torrent by URL or file path:
 Transmission::RPC::Torrent + "http://example.com/url/to/torrent.torrent"
 ```
 
+To add a torrent by metainfo:
+```ruby
+require 'base64'
+f = File.open "moo.torrent"
+Transmission::RPC::Torrent.add({:metainfo => Base64.strict_encode(f.read)})
+```
 To start all torrents:
 
 ```ruby

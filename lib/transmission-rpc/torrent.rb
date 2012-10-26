@@ -69,7 +69,13 @@ module Transmission
 
 			# Adds a torrent by file path or URL (.torrent file's only right now)
 			def self.add(options = {})
-				@response = Client.request("torrent-add", :filename => options[:url])
+				@response = nil
+				if options[:metainfo]
+					@response = Client.request("torrent-add", :metainfo => options[:metainfo])
+				else
+					@response = Client.request("torrent-add", :filename => options[:url])
+				end
+
 				if @response['result'] == 'success'
 					self.find(@response['arguments']['torrent-added']['id'])
 				else
