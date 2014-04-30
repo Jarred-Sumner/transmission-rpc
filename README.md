@@ -51,7 +51,11 @@ Transmission::RPC::Torrent.add({:metainfo => Base64.strict_encode(f.read)})
 
 To set specific options for torrent file:
 ```ruby
-Transmission::RPC::Torrent.add({:filename => "http://example.com/url/to/torrent.torrent", :download_dir => "path/to/downloaded/files", :paused => true})
+Transmission::RPC::Torrent.add({
+  :filename => "http://example.com/url/to/torrent.torrent",
+  :download_dir => "path/to/downloaded/files",
+  :paused => true
+})
 ```
 
 To start all torrents:
