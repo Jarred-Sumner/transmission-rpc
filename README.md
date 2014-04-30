@@ -27,7 +27,7 @@ Or install it yourself as:
 	$ gem install transmission-rpc
 
 It depends on ```transmission-daemon```. Install it from homebrew:
-		
+
 	$ brew install transmission
 
 ```transmission-daemon``` must be running, run it like so:
@@ -48,6 +48,16 @@ require 'base64'
 f = File.open "moo.torrent"
 Transmission::RPC::Torrent.add({:metainfo => Base64.strict_encode(f.read)})
 ```
+
+To set specific options for torrent file:
+```ruby
+Transmission::RPC::Torrent.add({
+  :filename => "http://example.com/url/to/torrent.torrent",
+  :download_dir => "path/to/downloaded/files",
+  :paused => true
+})
+```
+
 To start all torrents:
 
 ```ruby
