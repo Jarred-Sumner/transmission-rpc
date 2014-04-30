@@ -28,10 +28,22 @@ module Transmission
         :upload_ratio       => 'uploadRatio'
       }
 
+      STATUSES = [
+        :stopped,
+        :queued_to_check_files,
+        :checking_files,
+        :queued_to_download,
+        :downloading,
+        :queued_to_seed,
+        :seeding
+      ]
+
       ATTRIBUTES.each {|k,v| attr_accessor k}
+
       include Transmission::RPC
 
       def initialize(options = {})
+        options["status"] = STATUSES[options["status"]] if options["status"]
         ATTRIBUTES.each do |k,v|
           self.send("#{k}=", options[v])
         end
@@ -54,15 +66,15 @@ module Transmission
         Client.request("torrent-remove", { :delete_local_data => delete_data }, [self.id])
       end
 
-      # Checks if torrent is currently downloading
-      def downloading?
-        self.status == 4
-      end
+      # Status helpers (stopped?, downloading?, seeding?, etc)
+      STATUSES.each { |stat|
+        define_method((stat.to_s + '?').to_sym) {
+          self.status == stat
+        }
+      }
 
-      # Checks if torrent is paused
-      def paused?
-        self.status == 0
-      end
+      # Alias for backward compatibility
+      alias_method :paused?, :stopped?
 
       # Adds a torrent by URL or file path
       def self.+(filename)
