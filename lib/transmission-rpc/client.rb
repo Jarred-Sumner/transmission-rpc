@@ -12,7 +12,7 @@ module Transmission
 			end
 
 			# Sends out a request to Transmission's RPC server
-			# If you're curious about the formatting, [read this](https://trac.transmissionbt.com/browser/branches/1.7x/doc/rpc-spec.txt) 
+			# If you're curious about the formatting, [read this](https://trac.transmissionbt.com/browser/branches/1.7x/doc/rpc-spec.txt)
 			def self.request(method, arguments = {}, ids = [])
 				arguments = self.add_ids(arguments, ids) if ids.present?
 				begin
@@ -38,6 +38,15 @@ module Transmission
 			# This gets that session ID
 			def self.session_id
 				return @session_id unless @session_id.blank?
+				begin
+					RestClient.get(self.url)
+				rescue => e
+					return @session_id = e.response.headers[:x_transmission_session_id]
+				end
+			end
+
+			# The gem somtimes loses connection for no reason and needs to get a new session
+			def self.force_session_id!
 				begin
 					RestClient.get(self.url)
 				rescue => e
