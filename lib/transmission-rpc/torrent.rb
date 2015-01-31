@@ -23,6 +23,7 @@ module Transmission
         :status             => 'status',
         :torrent_file       => 'torrentFile',
         :total_size         => 'totalSize',
+        :trackers           => 'trackers',
         :upload_limit       => 'uploadLimit',
         :upload_limited     => 'uploadLimited',
         :upload_ratio       => 'uploadRatio'
