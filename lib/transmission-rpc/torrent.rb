@@ -23,6 +23,7 @@ module Transmission
         :status             => 'status',
         :torrent_file       => 'torrentFile',
         :total_size         => 'totalSize',
+        :trackers           => 'trackers',
         :upload_limit       => 'uploadLimit',
         :upload_limited     => 'uploadLimited',
         :upload_ratio       => 'uploadRatio'
@@ -64,6 +65,10 @@ module Transmission
       # Deletes the current torrent, and, optionally, the data for that torrent
       def delete!(delete_data = false)
         Client.request("torrent-remove", { :delete_local_data => delete_data }, [self.id])
+      end
+
+      def move!(path)
+        Client.request("torrent-set-location", { :location => path, :move => true}, [self.id])
       end
 
       # Status helpers (stopped?, downloading?, seeding?, etc)
