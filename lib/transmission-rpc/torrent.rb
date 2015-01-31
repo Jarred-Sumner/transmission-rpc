@@ -67,6 +67,10 @@ module Transmission
         Client.request("torrent-remove", { :delete_local_data => delete_data }, [self.id])
       end
 
+      def move!(path)
+        Client.request("torrent-set-location", { :location => path, :move => true}, [self.id])
+      end
+
       # Status helpers (stopped?, downloading?, seeding?, etc)
       STATUSES.each { |stat|
         define_method((stat.to_s + '?').to_sym) {
