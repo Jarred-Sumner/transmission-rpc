@@ -88,6 +88,12 @@ To stop a specific torrent:
 Transmission.torrents.first.stop!
 ```
 
+To move an existing torrent:
+
+```ruby
+Transmission.torrents.first.move! '/path/to/new/location'
+```
+
 To delete a torrent:
 
 ```ruby
