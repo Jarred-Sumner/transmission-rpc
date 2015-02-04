@@ -45,7 +45,7 @@ module Transmission
 				end
 			end
 
-			# The gem somtimes loses connection for no reason and needs to get a new session
+			# The gem sometimes loses connection for no reason and needs to get a new session
 			def self.force_session_id!
 				begin
 					RestClient.get(self.url)
