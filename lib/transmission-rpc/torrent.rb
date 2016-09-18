@@ -111,8 +111,10 @@ module Transmission
 
         @response = Client.request("torrent-add", options)
 
-        if @response['result'] == 'success'
+        if @response['result'] == 'success' && @response['arguments']['torrent-added']
           self.find(@response['arguments']['torrent-added']['id'])
+        elsif @response['result'] == 'success' && @response['arguments']['torrent-duplicate']
+          self.find(@response['arguments']['torrent-duplicate']['id'])
         else
           nil
         end
